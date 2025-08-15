@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# Multi-stage build
+>>>>>>> 9083e09b9a3bbb378c4c5dd16d0e2cc3d31d05b0
 FROM golang:1.21-alpine AS builder
 
 WORKDIR /app
@@ -9,6 +13,10 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
 
+<<<<<<< HEAD
+=======
+# Runtime stage
+>>>>>>> 9083e09b9a3bbb378c4c5dd16d0e2cc3d31d05b0
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 RUN addgroup -g 1001 -S appgroup && adduser -S appuser -u 1001 -G appgroup
