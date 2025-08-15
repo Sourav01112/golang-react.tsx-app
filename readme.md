@@ -1,5 +1,8 @@
 # Todo App
 
+
+![Todo App Screenshot](./assets/image.png)
+
 A full-stack todo application built with Go (Fiber) backend and React (TypeScript) frontend.
 
 ## Features
